@@ -1,0 +1,58 @@
+body {
+  background-color: #eef2f3; /* Soft, neutral background */
+  font-family: 'Georgia', serif; /* Elegant serif font */
+  margin: 0;
+  padding: 0;
+}
+
+.outer1 {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px; /* Generous padding for spacing */
+}
+
+.container {
+  background: #ffffff; /* Clean white background for content */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+  padding: 40px;
+  width: 100%;
+  max-width: 700px; /* Limit container width */
+}
+
+h1 {
+  color: #333; /* Darker gray for the main heading */
+  font-size: 2.8em; /* Large font size */
+  text-align: center; /* Center align */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+h2 {
+  color: #8e44ad; /* Rich purple for subheadings */
+  margin-top: 30px; /* Space above subheadings */
+  font-size: 1.8em; /* Larger subheading */
+  border-bottom: 2px solid #8e44ad; /* Underline for emphasis */
+  padding-bottom: 8px; /* Space below the line */
+}
+
+p {
+  color: #555; /* Dark gray text for readability */
+  line-height: 1.8; /* Improved line spacing */
+  margin: 15px 0; /* Space above and below paragraphs */
+}
+
+hr {
+  margin: 40px 0; /* Spacing around horizontal rule */
+  border: 0; /* Remove default border */
+  border-top: 1px solid #dcdcdc; /* Light border style */
+}
+
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2.2em; /* Responsive font size for smaller screens */
+  }
+
+  h2 {
+      font-size: 1.5em; /* Responsive subheading size */
+  }
+}

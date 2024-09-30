@@ -1,0 +1,58 @@
+
+<nav class="navbar bg-body-tertiary">
+  <div class="header">
+  <div class="header-1">
+    <div class="nav-part-1" routerLink="">
+      <div>
+        <img class="logo" src="assets/images/store.jpeg" alt="">
+      </div>
+      <!-- <div class="nav-Brand">Hub</div> -->
+    </div>
+    <form class="nav-part-2" #product ="ngForm"  (ngSubmit)="search(product.value)">
+        <input class="me-2 search-input" ngModel name="name" type="search" placeholder="Search" aria-label="Search">
+        <button class="search-button">Search</button>
+    </form>
+    <div class="nav-part-3"> 
+        <a *ngIf="!service.loginStatus && !adminService.adminLoginStatus" class="login" routerLink="login">Login</a>
+        <a *ngIf="service.loginStatus" class="login"  routerLink="logout">Logout</a>
+        <a *ngIf="adminService.adminLoginStatus" class="login"  routerLink="logout">Logout</a>
+        <a *ngIf="!adminService.adminLoginStatus" class="cart btn" routerLink="cart">Cart</a>
+    </div>
+  </div>
+
+  <div class="header-2">   
+    <nav class="navbar">
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <img class="menu-icon" src="https://cdn-icons-png.freepik.com/256/4204/4204600.png?ga=GA1.1.388368384.1702624134&" alt="">
+      </label>
+      <ul>
+        <li><a href="" class="active1" routerLink="">Home</a></li>
+        <li><a *ngIf="!adminService.adminLoginStatus" href="" routerLink="aboutus">About Us</a></li>
+        <li><a *ngIf="!adminService.adminLoginStatus" href="" routerLink="contact-us">Contact Us</a></li>
+        <li class="dropdown">
+          <a *ngIf="!adminService.adminLoginStatus" class="dropbtn">Categories</a>
+          <div class="dropdown-content">
+            <a (click)="fetchCatetory('Lipstick')" >Lipstick</a>
+            <!-- <a (click)="fetchCatetory('Nail Polish')" >Nail Polish</a> -->
+            <a (click)="fetchCatetory('Foundation')" >Foundation</a>
+            <a (click)="fetchCatetory('Eye Shadow')">Eye shad</a>
+            <!-- <a (click)="fetchCatetory('Eye Liner')">Eye Liner</a> -->
+            <!-- <a (click)="fetchCatetory('Compact Powder')">Compact Powder</a> -->
+            <a (click)="fetchCatetory('Mascara')">Mascara</a>
+            <!-- <a (click)="fetchCatetory('Kajal')">Kajal</a> -->
+            <!-- <a (click)="fetchCatetory('Concealer')">Concealer</a> -->
+          </div>
+        </li>
+        <li><a *ngIf="!adminService.adminLoginStatus" routerLink="products" >products</a></li>
+        <li *ngIf="adminService.adminLoginStatus">
+          <a routerLink="addproducts">Add Product</a>
+          <a routerLink="showproducts">Show Products</a>
+          <a routerLink="showallcustomers">Show All Customers</a>
+          <a routerLink="showcustomerbyid">Show Customers By Id</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+</nav>

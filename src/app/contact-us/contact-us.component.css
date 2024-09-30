@@ -1,0 +1,74 @@
+body {
+  background-color: #fafafa; /* Soft off-white background */
+  font-family: 'Arial', sans-serif; /* Simple, clean font */
+  margin: 0;
+  padding: 0;
+}
+
+.outer1 {
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px; /* Ample padding for spacing */
+}
+
+.container {
+  background: #ffffff; /* White background for content */
+  border-radius: 8px; /* Subtle rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  padding: 30px;
+  width: 100%;
+  max-width: 500px; /* Limit container width */
+}
+
+h1 {
+  color: #333; /* Dark gray for main heading */
+  font-size: 2.5em; /* Larger font size */
+  text-align: center; /* Center align */
+  margin-bottom: 15px; /* Space below heading */
+}
+
+h2 {
+  color: #555; /* Medium gray for subheadings */
+  margin-top: 20px; /* Space above subheadings */
+  font-size: 1.5em; /* Larger subheading */
+  border-bottom: 2px solid #e0e0e0; /* Light underline for emphasis */
+  padding-bottom: 5px; /* Space below the line */
+}
+
+p, ul {
+  color: #666; /* Soft gray text for readability */
+  line-height: 1.6; /* Improved line spacing */
+}
+
+ul {
+  padding-left: 20px; /* Indent for list items */
+  list-style-type: none; /* Remove bullets */
+}
+
+li {
+  position: relative; /* For custom bullet styling */
+  padding-left: 20px; /* Space for custom bullet */
+}
+
+li::before {
+  content: "•"; /* Custom bullet */
+  color: #007bff; /* Blue color for bullets */
+  position: absolute; /* Positioning for the bullet */
+  left: 0; /* Align to the left */
+}
+
+hr {
+  margin: 30px 0; /* Spacing around horizontal rule */
+  border: 0; /* Remove default border */
+  border-top: 1px solid #e0e0e0; /* Light border style */
+}
+
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2em; /* Responsive font size for smaller screens */
+  }
+
+  h2 {
+      font-size: 1.3em; /* Responsive subheading size */
+  }
+}
